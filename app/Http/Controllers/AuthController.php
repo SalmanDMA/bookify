@@ -178,4 +178,10 @@ class AuthController extends Controller
         toast('Password reset successfully', 'success');
         return redirect()->route('login');
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
+    }
 }

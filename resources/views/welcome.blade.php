@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<x-head title="Welcome" />
+<x-head title="Bookify" />
 
-<body>
-    <div>
-        <h1 class="text-3xl font-bold underline">Laravel Welcome</h1>
-
-    </div>
-</body>
+<x-layout-main>
+    <main class="w-full pt-[92px]">
+        <div></div>
+        Test
+    </main>
+</x-layout-main>
 
 </html>

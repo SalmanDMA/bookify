@@ -3,3 +3,37 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@layer components {
+    .dropdown-profile {
+        @apply absolute z-10 top-[200%] opacity-0 invisible -left-56 w-60 bg-white border border-gray-200 shadow-lg py-2 rounded-md transition-all duration-300 ease-in-out;
+    }
+
+    .dropdown-active {
+        @apply top-[140%] visible opacity-100;
+    }
+
+    .sidebar {
+        @apply fixed z-20 top-0 -left-full transition-all duration-300 ease-in-out flex py-8 px-4 lg:px-0 lg:py-0 bg-white lg:bg-transparent h-full w-56 lg:w-full lg:max-w-max lg:max-h-max lg:static flex-col lg:flex-row lg:gap-4 opacity-0 lg:opacity-100 invisible lg:visible shadow-xl lg:shadow-none;
+    }
+
+    .sidebar-open {
+        @apply left-0 visible opacity-100;
+    }
+
+    .overlay {
+        @apply fixed z-10 top-0 left-0 w-full h-full bg-black/30 hidden cursor-pointer;
+    }
+
+    .overlay-active {
+        @apply flex lg:hidden;
+    }
+
+    .search-component {
+        @apply w-full fixed top-0 left-0 block lg:hidden lg:invisible transition-all duration-300 ease-in-out;
+    }
+
+    .search-active {
+        @apply top-[92px];
+    }
+}

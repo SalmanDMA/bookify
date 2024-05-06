@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 // Route grup untuk semua rute yang memerlukan otentikasi
 Route::middleware('auth')->group(function () {
@@ -27,6 +28,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/orders', function () {
         return 'orders, halaman verified';
     })->middleware('verified')->name('orders');
+
+    Route::get('/profile', function () {
+        return 'profile, halaman verified';
+    })->middleware('verified')->name('profile');
 });
 
 // Rute untuk auth
